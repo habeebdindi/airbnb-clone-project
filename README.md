@@ -45,3 +45,7 @@ Implement and document key security measures to safeguard application data and e
 Gain insights into setting up automated development pipelines, boosting efficiency and minimizing errors during the deployment phase.
 
 This structured approach ensures I not only build technical skills but also adopt a mindset geared toward problem-solving, scalability, and industry-grade project execution.
+
+
+## Team Roles
+1. Backend Developer: Implement the core of the app — its algorithms and business logic. Devise an app architecture or design and implement the necessary integrations.
