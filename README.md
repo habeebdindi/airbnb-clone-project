@@ -26,3 +26,44 @@ The backend for the Airbnb Clone project is designed to provide a robust and sca
 - Redis: Used for caching and session management.
 - Docker: Containerization tool for consistent development and deployment environments.
 - CI/CD Pipelines: Automated pipelines for testing and deploying code changes.
+
+## Database Design
+### Entities:
+- Users - fields include: name, email, address, properties(one-to-many relationship with the Properties entity), bookings(one-to-many relationship with the Bookings entity), etc.
+- Properties - fields include: name, location, reviews(one-to-many with Reveiws), etc.
+- Bookings - fields include: date, price, date, etc.
+- Reviews - fields include: rating, comment, propertyId, etc.
+- Payments - fields include: price, booking(one-to-one with Booking), status, etc. 
+
+## Feature Breakdown
+1. API Documentation
+OpenAPI Standard: The backend APIs are documented using the OpenAPI standard to ensure clarity and ease of integration.
+Django REST Framework: Provides a comprehensive RESTful API for handling CRUD operations on user and property data.
+GraphQL: Offers a flexible and efficient query mechanism for interacting with the backend.
+2. User Authentication
+Endpoints: /users/, /users/{user_id}/
+Features: Register new users, authenticate, and manage user profiles.
+3. Property Management
+Endpoints: /properties/, /properties/{property_id}/
+Features: Create, update, retrieve, and delete property listings.
+4. Booking System
+Endpoints: /bookings/, /bookings/{booking_id}/
+Features: Make, update, and manage bookings, including check-in and check-out details.
+5. Payment Processing
+Endpoints: /payments/
+Features: Handle payment transactions related to bookings.
+6. Review System
+Endpoints: /reviews/, /reviews/{review_id}/
+Features: Post and manage reviews for properties.
+7. Database Optimizations
+Indexing: Implement indexes for fast retrieval of frequently accessed data.
+Caching: Use caching strategies to reduce database load and improve performance.
+
+## API Security
+- Authentication
+- Authorization
+- Rate limiting
+Security is crucial for each key area of the project (e.g., protecting user data, securing payments, etc.)
+
+## CI/CD Pipeline
+Continuous Integration and Continuos deployment is a practice used in software development to ensure smooth transitioning of a developed feature or a fixed bug to production while ensuring that the existing features are not broken. GitHub Actions is one tool that's used to implement CI/CD as is seen in this project.
